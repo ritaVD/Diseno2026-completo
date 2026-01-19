@@ -4,6 +4,21 @@
     --texto: #2b2b2b;
     --blanco: #ffffff;
 }
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
 
 body {
     margin: 0;
@@ -156,6 +171,7 @@ main {
     font-size: 26px;
     font-weight: 700;
     margin: 18px 0 16px;
+
 }
 
 /* =========================
@@ -163,14 +179,12 @@ main {
    ========================= */
 .who {
     max-width: 920px;
-    /* ajusta si tu Figma es más estrecho/ancho */
     margin: 0 auto;
     padding: 0 18px;
 }
 
 .who-card {
     background: var(--lila);
-    /* lila muy claro de la tarjeta */
     border-radius: 22px;
     padding: 14px;
     display: grid;
@@ -184,7 +198,6 @@ main {
 .who-card__img {
     width: 100%;
     height: 240px;
-    /* ajusta hasta que coincida con Figma */
     object-fit: cover;
     border-radius: 18px;
     display: block;
@@ -580,4 +593,328 @@ main {
 
 .btn:hover{
   background: #9b4ac6;   /* morado un poco más oscuro */
+}
+
+
+/* =========================================================
+   MEDIA QUERIES (AL FINAL DEL CSS)
+   ========================================================= */
+/* 1) WHO: en móvil debe ir en 1 columna, no 2 */
+.who-card{
+  grid-template-columns: 1fr;
+}
+
+/* 2) OFFERS: evita que el scroller “empije” el layout */
+.offers__scroller{
+  max-width: 100%;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+/* 3) FOOTER: reduce gaps que pueden desbordar */
+.footer-social{
+  gap: 28px;
+}
+
+/* 4) MAPA: que nunca sobresalga */
+.stores__map img{
+  height: 200px;
+}
+
+/* Ajustes generales anti-scroll horizontal */
+* { box-sizing: border-box; }
+img { max-width: 100%; height: auto; }
+
+/* Botón hamburguesa (base: oculto en desktop) */
+.burger{
+  display: none;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--morado);
+}
+
+/* =========================
+   TABLET (601px - 1024px)
+   ========================= */
+/* =========================
+   TABLET (601px - 1024px)
+   ========================= */
+@media (min-width: 601px) and (max-width: 1024px){
+
+  /* --- TOPBAR: brand izquierda, user derecha y buscador en 2ª fila --- */
+  .topbar{
+    display: grid;
+    grid-template-columns: 1fr auto;  /* brand | user */
+    grid-template-rows: auto auto;    /* fila 1: brand+user, fila 2: buscador */
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 10px;
+
+    height: auto;          /* importante: no 80px */
+    padding: 10px 18px;
+  }
+
+  /* brand ocupa toda la fila 1 (columna 1) */
+  .brand{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  /* logo izq, texto dcha */
+    width: 100%;
+  }
+
+  /* reduce un poco el logo (opcional pero recomendable) */
+  .brand__icon{
+    width: 72px;
+    height: 72px;
+  }
+
+  .brand__text{
+    font-size: 22px;
+  }
+
+  /* user a la derecha en la fila 1 */
+  .user{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+  }
+
+  /* quita los margin-left grandes (siempre en tablet) */
+  .user__avatar,
+  .user__circle{
+    margin-left: 0 !important;
+  }
+
+  /* buscador debajo ocupando todo el ancho */
+  .search{
+    grid-column: 1 / 3;   /* ocupa las 2 columnas */
+    grid-row: 2 / 3;
+    justify-content: center;
+  }
+
+  .search input{
+    width: min(520px, 90%);
+    margin-right: 0;
+    height: 30px;
+  }
+
+  /* --- NAV: menú horizontal y el buscador ya va debajo (por topbar) --- */
+  .menu__list{
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 26px;
+  }
+
+  /* --- FOOTER: 3 columnas horizontal --- */
+  .footer-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 18px 18px;
+  }
+
+  /* (por si el gap de redes es demasiado grande en tablet) */
+  .footer-social{
+    gap: 50px;
+  }
+
+  /* --- TIENDA: apilar sidebar + productos --- */
+  .shop{
+    grid-template-columns: 1fr; /* se apilan */
+    gap: 18px;
+  }
+
+  /* catálogo: 2 o 3 por fila (elige 2 si se ve apretado) */
+  .shop-products{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  /* cards ocupan bien el grid */
+  .shop-card{
+    max-width: none;
+    width: 100%;
+  }
+
+  /* Ocultar barra de scroll visual en el carrusel (Tablet) */
+  .offers__scroller {
+    scrollbar-width: none;
+  }
+  .offers__scroller::-webkit-scrollbar {
+    display: none;
+  }
+}
+/* Categorías como barra horizontal */
+  .shop-categories ul{
+    display: flex;
+    flex-wrap: wrap;          /* si no caben, bajan */
+    gap: 18px;
+    justify-content: flex-start;
+  }
+
+  .shop-categories li{
+    margin-bottom: 0;         /* quitamos el espacio vertical */
+  }
+
+  .shop-categories label{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    white-space: nowrap;     /* evita saltos raros */
+  }
+
+
+/* =========================
+   MÓVIL (0px - 600px)
+   ========================= */
+@media (max-width: 600px){
+
+  /* Estructura general en vertical */
+  topbar{
+    display: grid;
+    grid-template-columns: 1fr auto auto; /* brand | burger | user */
+    grid-template-rows: auto auto;        /* fila 1 arriba, fila 2 buscador */
+    align-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
+    padding: 10px 14px;
+    height: auto;
+  }
+
+  /* brand arriba */
+  .brand{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+.topbar{
+    height: auto;          /* IMPORTANTÍSIMO */
+    padding: 10px 14px;    /* menos aire */
+    row-gap: 8px;          /* menos separación */
+  }
+  /* Menú hamburguesa visible */
+  .burger{
+    display: inline-flex;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: transparent;
+    border: 0;
+    color: var(--morado);
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  /* User icon a la derecha, debajo o al lado */
+  .user{
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    justify-self: end;
+  }
+
+  .user__avatar,
+  .user__circle{
+    margin-left: 0 !important;
+  }
+
+  .user__avatar{
+    width: 40px;
+    height: 40px;
+    border-width: 2px;
+  }
+  /* Buscador independiente debajo */
+  .search{
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    justify-content: stretch;
+  }
+  .search input{
+    width: 100%;
+    margin-right: 0;
+    height: 36px;
+    border-radius: 10px;
+    font-size: 14px;
+  }
+  /* Menú horizontal desaparece */
+  .menu__list{
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 0 0;
+  }
+
+  /* Cuando está abierto */
+  body.nav-open .menu__list{
+    display: flex;
+  }
+
+  /* Ajusta el nav para que se vea tipo desplegable */
+  .menu{
+    padding: 6px 0 14px;
+  }
+
+  /* FOOTER: apilar vertical */
+  .footer-grid{
+    grid-template-columns: 1fr;
+    gap: 14px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right{
+    justify-content: center;
+  }
+
+  .footer-right__img{
+    transform: none; /* quita el desplazamiento que en móvil suele romper */
+  }
+
+  .footer-social{
+    gap: 30px; /* antes 80px, en móvil queda gigante */
+  }
+
+  /* TIENDA (página productos) */
+  /* En móvil: ocultar el logotipo SOLO en la tienda (productos) */
+  /* Como tú no tienes <body class="products">, lo hacemos por página usando el HTML:
+     añade al body de tienda.html: <body class="page-shop">
+  */
+  .page-shop .brand__icon{
+    display: none;
+  }
+
+  /* contenido apilado */
+  .shop{
+    grid-template-columns: 1fr;
+    padding: 16px 14px;
+  }
+
+  /* catálogo 1 por fila */
+  .shop-products{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .shop-card{
+    max-width: none;
+    width: 100%;
+  }
+
+  /* Ocultar barra de scroll visual en el carrusel (Móvil) */
+  .offers__scroller {
+    scrollbar-width: none;
+  }
+  .offers__scroller::-webkit-scrollbar {
+    display: none;
+  }
 }

@@ -7,15 +7,19 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<body class="page-shop">
 
-<body>
     <header class="site-header">
 
         <div class="topbar">
             <div class="brand">
                 <img class="brand__icon" src="img/logo.png" alt="Logo llave" />
+                <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false">
+      ☰
+    </button>
                 <span class="brand__text">Aurora’s keys</span>
-            </div>
+
+              </div>
 
             <form class="search" action="#" method="get">
                 <label class="sr-only" for="q">Buscar</label>
@@ -247,6 +251,15 @@
     </div>
   </div>
 </footer>
+<script>
+  const burger = document.querySelector('.burger');
+  if (burger) {
+    burger.addEventListener('click', () => {
+      const open = document.body.classList.toggle('nav-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+</script>
 
 </body>
 
