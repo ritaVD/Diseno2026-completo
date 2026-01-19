@@ -1,0 +1,45 @@
+.columna1 {
+  position: absolute;
+  width: 250px;
+  height: 100vh;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  z-index: 1;
+}
+
+#sidePanel {
+  color: white;
+  background-color: #222;
+  height: auto;
+}
+
+.columna1 {
+  -webkit-transform: translate(-250px, 0);
+  transform: translate(-250px, 0);
+}
+
+.columna1.open {
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.columna2 {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  margin-top: 100px;
+}
+
+@media (min-width: 600px) {
+  .container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
+
+  .columna1 {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}

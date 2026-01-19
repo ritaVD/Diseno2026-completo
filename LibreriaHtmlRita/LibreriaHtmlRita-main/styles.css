@@ -1,0 +1,583 @@
+:root {
+    --lila: #f5d9ff;  /*Primary 100 */
+    --morado: #E28CFF; /* Primary 500 */ 
+    --texto: #2b2b2b;
+    --blanco: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", system-ui, Arial, sans-serif;
+    color: var(--texto);
+    background: var(--blanco);
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+.site-header {
+    background: var(--lila);
+    border-bottom: 2px solid var(--lila-borde);
+}
+
+
+.topbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 0 24px;
+    height: 80px;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+
+}
+
+.brand__icon {
+    width: 100px;
+    height: 100px;
+
+}
+
+.brand__text {
+    font-family: "Montserrat", system-ui, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--morado);
+    line-height: 1;
+}
+
+
+.search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+
+}
+
+.search input {
+
+    width: 220px;
+    height: 22px;
+    border: none;
+    border-radius: 4px;
+    padding: 0 10px;
+    outline: none;
+    background: #F1C5FF; /* Primary 200 */
+    font-size: 12px;
+    margin-right: 25px;
+
+}
+
+
+.user {
+    text-decoration: none;
+}
+
+.user__circle {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: #f4dcff;
+    border: 2px solid #caa0e3;
+    margin-left: 350px;
+
+}
+.user__avatar{
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;      /* círculo */
+  object-fit: cover;       /* recorte correcto */
+  background: #f4dcff;
+  border: 3px solid #caa0e3;
+  margin-left: 350px;      /* mantienes la posición actual */
+}
+
+
+.user__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #caa0e3;
+}
+
+
+.menu {
+    padding: 6px 0 10px;
+}
+
+.menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+}
+
+.menu__list a {
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--morado);
+}
+
+.menu__list a[aria-current="page"] {
+    font-weight: 600;
+}
+
+
+/* =========================
+   BLOQUES GENERALES
+   ========================= */
+main {
+    padding: 26px 0 40px;
+}
+
+.section-title {
+    font-family: "Montserrat", system-ui, Arial, sans-serif;
+    color: var(--morado);
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 18px 0 16px;
+}
+
+/* =========================
+   ¿QUIÉNES SOMOS?
+   ========================= */
+.who {
+    max-width: 920px;
+    /* ajusta si tu Figma es más estrecho/ancho */
+    margin: 0 auto;
+    padding: 0 18px;
+}
+
+.who-card {
+    background: var(--lila);
+    /* lila muy claro de la tarjeta */
+    border-radius: 22px;
+    padding: 14px;
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    /* imagen un poco más ancha */
+    gap: 16px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .10);
+}
+
+/* Imagen grande izquierda */
+.who-card__img {
+    width: 100%;
+    height: 240px;
+    /* ajusta hasta que coincida con Figma */
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+/* Texto derecha */
+.who-card__text {
+    font-size: 12px;
+    line-height: 1.35;
+    background-color: #ffffff;
+    
+}
+
+.who-card__text p {
+    margin: 0 0 10px;
+}
+
+/* =========================
+   QUÉ OFRECEMOS (scroll)
+   ========================= */
+.offers{
+  background: var(--lila);         /* lila de fondo (sección completa) */
+  padding: 28px 0 34px;
+  margin-top: 22px;
+}
+
+/* Texto superior de la sección */
+.offers__intro{
+  max-width: 980px;
+  margin: 0 auto 18px;
+  padding: 0 18px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #2b2b2b;
+}
+
+/* Fila con scroll horizontal */
+.offers__scroller{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 10px 18px 6px;
+
+  display: flex;
+  gap: 26px;
+
+  overflow-x: auto;            /* scroll horizontal */
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+
+  /* Para que se note el “carrusel” y no se rompan las tarjetas */
+  -webkit-overflow-scrolling: touch;
+}
+
+
+
+/* Tarjeta de producto */
+.product-card{
+  flex: 0 0 170px;             /* ancho fijo para que haya scroll */
+  background: #F1C5FF;         /* Primary 200 */
+  border-radius: 18px;
+  padding: 14px 14px 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+/* Imagen centrada y con tamaño consistente */
+.product-card__img{
+  width: 110px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+}
+
+/* Título */
+.product-card__title{
+  margin: 0 0 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Descripción */
+.product-card__desc{
+  margin: 0 0 10px;
+  font-size: 11px;
+  line-height: 1.25;
+  color: #2b2b2b;
+}
+
+/* Precio  centrado */
+.product-card__price{
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  color: #004750; /*Secondary 900*/
+  font-weight: 500;
+}
+
+/* =========================
+   BUSCA TU LIBRERÍA (MAPA + LISTA)
+   ========================= */
+.stores{
+  max-width: 920px;
+  margin: 28px auto 40px;
+  padding: 0 18px;
+}
+
+/* Mapa como imagen */
+.stores__map{
+  max-width: 760px;
+  margin: 0 auto 18px;
+  border-radius: 16px;
+  overflow: hidden;              /* para que el borde recorte la imagen */
+  box-shadow: 0 6px 16px rgba(0,0,0,.10);
+}
+
+.stores__map img{
+  width: 100%;
+  height: 240px;                 
+  object-fit: cover;
+  display: block;
+}
+
+/* Caja lila con lista */
+.stores__box{
+  background: #f4dcff;
+  border-radius: 14px;
+  padding: 16px 18px 18px;
+}
+
+.stores__title{
+  margin: 0 0 12px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2b2b2b;
+}
+
+/* Lista */
+.stores__list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+/* Cada “pastilla” */
+.store-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: #eec9ff;
+  border-radius: 999px;
+  padding: 10px 14px;
+
+  text-decoration: none;
+  color: #2b2b2b;
+  font-size: 11px;
+}
+
+/* Puntito rojo */
+.store-dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff3b3b;
+  flex: 0 0 auto;
+}
+
+/* Hover suave (queda pro y no rompe el diseño) */
+.store-link:hover{
+  filter: brightness(0.98);
+}
+
+/* =========================
+   FOOTER (3 columnas)
+   ========================= */
+.site-footer{
+  background: #f4dcff;
+  margin-top: 40px;
+  position: relative;
+}
+
+/* Grid 3 columnas iguales */
+.footer-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  min-height: 140px;
+  padding: 18px 28px;
+  position: relative;
+}
+
+/* IZQUIERDA */
+.footer-left{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer-left__img{
+  width: 85px;     
+  height: auto;
+}
+
+/* CENTRO */
+.footer-center{
+  text-align: center;
+}
+
+.footer-center__copy{
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: #000;
+}
+
+.footer-center__links{
+  margin: 0 0 18px;
+  font-size: 13px;
+}
+
+.footer-link{
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-sep{
+  margin: 0 8px;
+}
+
+/* Redes centradas */
+.footer-social{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 80px;         
+}
+.footer-social a{
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;  
+}
+
+
+
+/* DERECHA */
+.footer-right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start; 
+}
+
+.footer-right__img{
+  width: 90px;      
+  height: auto;
+  transform: translateY(-45px); 
+}
+
+/* TIENDA ONLINE PAGINA DE COMPRA
+/* CONTENEDOR GENERAL */
+.shop{
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+/* CATEGORÍAS */
+.shop-categories{
+  background: var(--lila);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.shop-categories h2{
+  margin-top: 0;
+}
+
+.shop-categories ul{
+  list-style: none;
+  padding: 0;
+}
+
+.shop-categories li{
+  margin-bottom: 8px;
+}
+.shop-products{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+
+/* =========================
+   CARD PRODUCTO (TIENDA)
+   ========================= */
+.shop-card{
+  background: var(--lila);
+  border-radius: 22px;
+  padding: 18px 16px 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.12);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 260px;
+}
+
+/* Imagen */
+.shop-card__img{
+  width: 150px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin-bottom: 14px;
+}
+
+/* Título */
+.shop-card__title{
+  margin: 6px 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Descripción */
+.shop-card__desc{
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #2b2b2b;
+}
+
+/* Precio */
+.shop-card__price{
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #004750; 
+}
+
+/* Botones */
+.shop-card__actions{
+  display: flex;
+  gap: 12px;
+}
+
+/* Botón base */
+.btn{
+  border: none;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Comprar */
+.btn-primary{
+  background: var(--morado);
+  color: #fff;
+}
+
+/* Añadir al carrito */
+.btn-secondary{
+  background: var(--morado);
+  color: #fff;
+}
+
+/* Badge OFERTA */
+.shop-card{
+  position: relative; 
+}
+
+.badge-offer{
+  position: absolute;
+  top: 14px;
+  left: -32px;
+
+  background: #B5F7FF;    /* Secondary 300*/      
+  color: #000;
+  font-size: 11px;
+  font-weight: 600;
+
+  padding: 4px 36px;
+  transform: rotate(-45deg);
+  box-shadow: 0 3px 6px rgba(0,0,0,.15);
+}
+
+.btn:hover{
+  background: #9b4ac6;   /* morado un poco más oscuro */
+}

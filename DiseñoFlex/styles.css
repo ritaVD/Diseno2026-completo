@@ -1,0 +1,200 @@
+.container {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 2rem;
+
+    display: flex;
+    gap: .5rem;
+    padding: .5rem;
+}
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column {
+    flex-direction: column;
+}
+.caja{
+    width: 3rem;
+    height: 3rem;
+}
+.box1 {
+    background-color: red;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box2{
+    background-color: green;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box3{
+    background-color: blue;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box4{
+    background-color: orange;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container2 {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 2rem;
+    margin-left: 75rem;
+
+    display: flex;
+    gap: .5rem;
+    padding: .5rem;
+    flex-direction: row-reverse;
+}
+
+.box1c2 {
+    background-color: red;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.box2c2{
+    background-color: green;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box3c2{
+    background-color: blue;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box4c2{
+    background-color: orange;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container3 {
+    width: 300px;
+    margin-bottom: 2rem;
+   
+
+    display: flex;
+    gap: .5rem;
+    padding: .5rem;
+    flex-direction: column;
+    
+}
+
+.box1c3 {
+    background-color: red;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.box2c3{
+    background-color: green;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box3c3{
+    background-color: blue;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box4c3{
+    background-color: orange;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container4 {
+    width: 300px;
+    
+    margin-bottom: 2rem;
+   
+
+    display: flex;
+    gap: .5rem;
+    padding: .5rem;
+    flex-direction: column-reverse;
+    
+    
+}
+
+.box1c4 {
+    background-color: red;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.box2c4{
+    background-color: green;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box3c4{
+    background-color: blue;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box4c4{
+    background-color: orange;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

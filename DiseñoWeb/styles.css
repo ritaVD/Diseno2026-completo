@@ -1,0 +1,59 @@
+* {
+    font-family: system-ui, -apple-system, sans-sereif;
+    margin: 0;
+}
+nav {
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+.tarjeta-producto {
+    width: 19rem;
+    margin: 4rem auto;
+    border: 1px solid #ccc;
+    position: relative;
+    padding: 3rem;
+    
+   
+}
+.etiqueta-producto {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    background-color: red;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+.etiqueta-producto:empty{
+    display: none;
+}
+.imagen-producto {
+    float: left;
+    width: 6rem;
+    height: 6rem;
+    margin-right: 0.5rem;
+}
+/*Hay que limpiar el float*/
+.tarjeta-producto::after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    bottom: 0;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+}

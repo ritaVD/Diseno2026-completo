@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- HEADER COMUN A TODAS LAS PAGINAS -->
+    <header class="site-header">
+
+        <div class="topbar">
+            <div class="brand">
+                <img class="brand__icon" src="img/logo.png" alt="Logo llave" />
+                <span class="brand__text">Aurora’s keys</span>
+            </div>
+
+            <form class="search" action="#" method="get">
+                <label class="sr-only" for="q">Buscar</label>
+                <input id="q" name="q" type="search" placeholder="Buscar" />
+            </form>
+
+            <a class="user" href="#" aria-label="Perfil">
+               <img src="img/user.png" alt="Usuario" class="user__avatar">
+            </a>
+
+
+        </div>
+
+        <nav class="menu" aria-label="Navegación principal">
+            <ul class="menu__list">
+                <li><a href="index.html" aria-current="page">Tu librería</a></li>
+                <li><a href="tienda.html">Compra on-line</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+    </header>
+
+    <main class="shop">
+
+  <!-- COLUMNA IZQUIERDA: CATEGORÍAS -->
+  <aside class="shop-categories">
+    <h2>Categorías</h2>
+
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox">
+          Todos los productos
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox">
+          Libros
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox">
+          Tazas
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox">
+          Bolsas
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox">
+          Otros
+        </label>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- COLUMNA DERECHA: PRODUCTOS -->
+  <section class="shop-products">
+
+    <!-- Reutiliza card -->
+    <article class="shop-card">
+  <img
+    src="img/alas.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Alas de Sangre</h3>
+
+  <p class="shop-card__desc">
+    Romance, peligro y dragones en una academia donde solo sobreviven los fuertes.
+  </p>
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+
+     <article class="shop-card">
+      <span class="badge-offer">Oferta</span>
+  <img
+    src="img/alas2.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Alas de Hierro</h3>
+
+  <p class="shop-card__desc">
+    Romance, peligro y dragones en una academia donde solo sobreviven los fuertes.
+  </p>
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+ 
+    <article class="shop-card">
+  <img
+    src="img/alas3.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Alas de Onix</h3>
+
+  <p class="shop-card__desc">
+    Romance, peligro y dragones en una academia donde solo sobreviven los fuertes.
+  </p>
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+  <img
+    src="img/cruel.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">El príncipe cruel</h3>
+<p class="shop-card__desc">
+  Intriga, traiciones y un mundo de hadas oscuras donde el poder se conquista con ingenio… y se paga con sangre.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+ 
+ <article class="shop-card">
+      <span class="badge-offer">Oferta</span>
+  <img
+    src="img/cruel2.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">El rey malvado</h3>
+<p class="shop-card__desc">
+  Intriga, traiciones y un mundo de hadas oscuras donde el poder se conquista con ingenio… y se paga con sangre.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+  <img
+    src="img/cruel3.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">La reina de la nada</h3>
+<p class="shop-card__desc">
+  Intriga, traiciones y un mundo de hadas oscuras donde el poder se conquista con ingenio… y se paga con sangre.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+  
+    <article class="shop-card">
+      <span class="badge-offer">Oferta</span>
+
+  <img
+    src="img/cruelEstuche.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Estuche especial</h3>
+<p class="shop-card__desc">
+  Intriga, traiciones y un mundo de hadas oscuras donde el poder se conquista con ingenio… y se paga con sangre.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+  <img
+    src="img/academia1.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">La academia || Aurora</h3>
+<p class="shop-card__desc">
+  Magia, secretos y rivalidades en una academia donde nada es lo que parece y cada elección puede cambiar tu destino.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+  <img
+    src="img/academia2.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">La academia || Ocaso</h3>
+<p class="shop-card__desc">
+  Magia, secretos y rivalidades en una academia donde nada es lo que parece y cada elección puede cambiar tu destino.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+  <img
+    src="img/acotar1.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Una corte de rosas y espinas</h3>
+<p class="shop-card__desc">
+  Misterio, romance y criaturas inmortales en un mundo donde el amor puede salvarte… o condenarte para siempre.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+  <img
+    src="img/acotar2.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Una corte de niebla y furia</h3>
+<p class="shop-card__desc">
+  Misterio, romance y criaturas inmortales en un mundo donde el amor puede salvarte… o condenarte para siempre.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+  <img
+    src="img/acotar3.webp"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Una corte de alas y ruina</h3>
+<p class="shop-card__desc">
+  Misterio, romance y criaturas inmortales en un mundo donde el amor puede salvarte… o condenarte para siempre.
+</p>
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+  <img
+    src="img/acotar4.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Una corte de hielo y estrellas</h3>
+<p class="shop-card__desc">
+  Misterio, romance y criaturas inmortales en un mundo donde el amor puede salvarte… o condenarte para siempre.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+      <span class="badge-offer">Oferta</span>
+
+  <img
+    src="img/acotar5.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Una corte de llamas plateadas</h3>
+<p class="shop-card__desc">
+  Misterio, romance y criaturas inmortales en un mundo donde el amor puede salvarte… o condenarte para siempre.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+  <img
+    src="img/alchemised.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Alchemised</h3>
+<p class="shop-card__desc">
+  Oscuridad, alquimia y secretos que duelen: un viaje a un mundo roto donde la salvación ya no es una opción… pero la venganza sí.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+  <img
+    src="img/powerless.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Powerless</h3>
+<p class="shop-card__desc">
+  Una ladrona sin poderes, un príncipe destinado a cazarla… y una atracción que podría destruirlos a ambos.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+    <article class="shop-card">
+      <span class="badge-offer">Oferta</span>
+
+  <img
+    src="img/power2.jpg"
+    alt="Alas de sangre"
+    class="shop-card__img"
+  >
+
+  <h3 class="shop-card__title">Reckless</h3>
+<p class="shop-card__desc">
+  Una ladrona sin poderes, un príncipe destinado a cazarla… y una atracción que podría destruirlos a ambos.
+</p>
+
+
+  <p class="shop-card__price">21,75 €</p>
+
+  <div class="shop-card__actions">
+    <button class="btn btn-primary">Comprar</button>
+    <button class="btn btn-secondary">Añadir al carrito</button>
+  </div>
+</article>
+
+</section>
+
+</main>
+
+
+
+
+
+<!-- FOOTER COMUN A TODAS LAS PAGINAS -->
+<footer class="site-footer">
+  <div class="footer-grid">
+    <!-- Columna izquierda: icono -->
+    <div class="footer-left" aria-label="Decoración">
+      <img src="img/logo.png" alt="" class="footer-left__img">
+    </div>
+
+    <!-- Columna centro: textos + redes -->
+    <div class="footer-center">
+      <p class="footer-center__copy">@Copyright Rita Vicente</p>
+      <p class="footer-center__links">
+        <a href="#" class="footer-link">Política de datos</a>
+        <span class="footer-sep">|</span>
+        <a href="#" class="footer-link">Cookies</a>
+      </p>
+
+      <ul class="footer-social" aria-label="Redes sociales">
+  <li>
+    <a href="#" aria-label="Instagram">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+  </li>
+  <li>
+    <a href="#" aria-label="Twitter">
+      <i class="fa-brands fa-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="#" aria-label="Facebook">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+  </li>
+</ul>
+
+    </div>
+
+    <!-- Columna derecha: lobo -->
+    <div class="footer-right" aria-label="Decoración">
+      <img src="img/lobo.png" alt="" class="footer-right__img">
+    </div>
+  </div>
+</footer>
+</body>
+
+
+</html>
