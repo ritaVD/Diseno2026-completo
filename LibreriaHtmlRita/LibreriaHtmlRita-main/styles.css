@@ -597,7 +597,7 @@ main {
 
 
 /* =========================================================
-   MEDIA QUERIES (AL FINAL DEL CSS)
+   MEDIA QUERIES 
    ========================================================= */
 /* 1) WHO: en móvil debe ir en 1 columna, no 2 */
 .who-card{
@@ -635,9 +635,6 @@ img { max-width: 100%; height: auto; }
   color: var(--morado);
 }
 
-/* =========================
-   TABLET (601px - 1024px)
-   ========================= */
 /* =========================
    TABLET (601px - 1024px)
    ========================= */
@@ -687,7 +684,7 @@ img { max-width: 100%; height: auto; }
   /* quita los margin-left grandes (siempre en tablet) */
   .user__avatar,
   .user__circle{
-    margin-left: 0 !important;
+    margin-left: 0;
   }
 
   /* buscador debajo ocupando todo el ancho */
@@ -774,7 +771,7 @@ img { max-width: 100%; height: auto; }
 @media (max-width: 600px){
 
   /* Estructura general en vertical */
-  topbar{
+  .topbar{
     display: grid;
     grid-template-columns: 1fr auto auto; /* brand | burger | user */
     grid-template-rows: auto auto;        /* fila 1 arriba, fila 2 buscador */
@@ -824,7 +821,7 @@ img { max-width: 100%; height: auto; }
 
   .user__avatar,
   .user__circle{
-    margin-left: 0 !important;
+    margin-left: 0;
   }
 
   .user__avatar{
