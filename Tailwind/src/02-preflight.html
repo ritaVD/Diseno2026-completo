@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. Preflight - Tailwind CSS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="p-10 bg-slate-50">
+
+    <a href="index.html" class="inline-block mb-8 text-blue-600 hover:underline">← Volver al índice</a>
+
+    <!-- El h1 ya tiene estilos base aplicados en css/tailwind.css -->
+    <h1>02. Conceptos Base y Preflight</h1>
+
+    <div class="space-y-4 mb-10">
+        <p>Gracias a <strong>Preflight</strong>, los elementos como este párrafo y los encabezados tienen estilos reseteados para garantizar consistencia entre navegadores.</p>
+        <p>Hemos aplicado estilos globales a <code>h1</code> y <code>h2</code> usando <code>@layer base</code> en nuestro CSS, por lo que aparecen estilizados sin clases directas en el HTML.</p>
+    </div>
+
+    <h2>Comparativa Visual</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+        <div class="bg-white p-6 rounded shadow">
+            <h3 class="font-bold mb-2">HTML Estándar (Simulado)</h3>
+            <div class="border p-4">
+                <p>Título grande</p>
+                <p>• Lista con puntos</p>
+                <p><u>Enlace azul</u></p>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded shadow">
+            <h3 class="font-bold mb-2">Tailwind (Utility Classes)</h3>
+            <div class="border p-4">
+                <p class="text-4xl font-bold mb-4">Título Grande y Negrita</p>
+                <p>Lista sin estilos por defecto</p>
+                <a href="#" class="text-blue-500 hover:underline">Enlace estilizado</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04. Tipografía - Tailwind CSS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+</head>
+<body class="p-10 bg-slate-50 font-[Plus_Jakarta_Sans]">
+    
+    <a href="index.html" class="inline-block mb-8 text-blue-600 hover:underline">← Volver al índice</a>
+
+    <h1>04. Tipografía</h1>
+    <p class="mb-8 text-slate-600">Esta página utiliza la fuente <strong>Plus Jakarta Sans</strong> configurada globalmente en el body.</p>
+
+    <div class="space-y-12">
+        
+        <!-- Pesos -->
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="mb-4 text-2xl border-b pb-2">Pesos (Font Weight)</h2>
+            <div class="space-y-4">
+                <p class="font-thin text-2xl">font-thin (100)</p>
+                <p class="font-light text-2xl">font-light (300)</p>
+                <p class="font-normal text-2xl">font-normal (400)</p>
+                <p class="font-medium text-2xl">font-medium (500)</p>
+                <p class="font-bold text-2xl">font-bold (700)</p>
+                <p class="font-black text-2xl">font-black (900)</p>
+            </div>
+        </section>
+
+        <!-- Tamaños -->
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="mb-4 text-2xl border-b pb-2">Tamaños (Text Size)</h2>
+            <div class="space-y-4">
+                <p class="text-xs">text-xs (0.75rem)</p>
+                <p class="text-sm">text-sm (0.875rem)</p>
+                <p class="text-base">text-base (1rem - Default)</p>
+                <p class="text-lg">text-lg (1.125rem)</p>
+                <p class="text-xl">text-xl (1.25rem)</p>
+                <p class="text-2xl">text-2xl (1.5rem)</p>
+                <p class="text-5xl">text-5xl (3rem)</p>
+                <p class="text-7xl">text-7xl</p>
+                
+                <h3 class="mt-6 font-bold text-lg text-slate-500">Arbitrario:</h3>
+                <p class="text-[40px] leading-tight text-blue-600">Texto exacto de 40px usando text-[40px]</p>
+            </div>
+        </section>
+
+        <!-- Alineación y Estilos -->
+        <section class="bg-white p-6 rounded-lg shadow-sm">
+            <h2 class="mb-4 text-2xl border-b pb-2">Estilos y Alineación</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="border p-4">
+                    <p class="text-left font-bold">text-left</p>
+                    <p class="text-left">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="border p-4">
+                    <p class="text-center font-bold">text-center</p>
+                    <p class="text-center">Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="border p-4">
+                    <p class="text-right font-bold">text-right</p>
+                    <p class="text-right">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+
+            <p class="mt-6 text-2xl italic text-slate-600">Texto en cursiva (italic)</p>
+            <p class="text-2xl underline decoration-pink-500 decoration-4">Texto subrayado (underline)</p>
+        </section>
+
+    </div>
+
+</body>
+</html>

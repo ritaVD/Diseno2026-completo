@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Link to the shared Tailwind CSS file -->
+    <link rel="stylesheet" href="../src/css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Internal:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Fallback for specific font if needed, or use Inter/system-ui */
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+    </style>
+</head>
+<body class="bg-black min-h-screen flex items-center justify-center p-4 font-sans antialiased">
+
+    <!-- Card Container -->
+    <div class="bg-[#0f0f0f] border border-white/20 rounded-2xl p-7 w-[360px] shadow-2xl relative">
+        
+        <h1 class="text-white text-3xl font-bold mb-6 tracking-tight">Sign Up</h1>
+
+        <form action="#" class="space-y-4">
+            
+            <!-- Name Input -->
+            <div class="space-y-1">
+                <label for="name" class="block text-white text-sm font-bold ml-0.5">Name</label>
+                <div class="relative">
+                    <input type="text" id="name" placeholder="Enter your name" 
+                        class="w-full bg-[#0f0f0f] border-2 border-blue-600 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:ring-0 transition-colors">
+                </div>
+            </div>
+
+            <!-- Email Input -->
+            <div class="space-y-1">
+                <label for="email" class="block text-white text-sm font-bold ml-0.5">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" 
+                    class="w-full bg-[#0f0f0f] border border-gray-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-600 focus:border-2 focus:px-[15px] focus:py-[9px] transition-all">
+            </div>
+
+            <!-- Password Input -->
+            <div class="space-y-1">
+                <label for="password" class="block text-white text-sm font-bold ml-0.5">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" 
+                    class="w-full bg-[#0f0f0f] border border-gray-700 rounded-lg px-4 py-2.5 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-blue-600 focus:border-2 focus:px-[15px] focus:py-[9px] transition-all">
+            </div>
+
+            <!-- Checkbox -->
+            <div class="flex items-center gap-2 pt-2">
+                <div class="relative flex items-center">
+                    <input type="checkbox" id="terms" checked class="peer w-4 h-4 appearance-none rounded-sm border border-gray-600 bg-[#0f0f0f] checked:bg-blue-600 checked:border-blue-600 cursor-pointer">
+                    <svg class="absolute w-3 h-3 text-white pointer-events-none opacity-0 peer-checked:opacity-100 left-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                </div>
+                <label for="terms" class="text-white text-xs font-semibold select-none cursor-pointer">I agree with terms and conditions</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="w-full bg-[#2563EB] hover:bg-blue-600 text-white font-bold py-3 rounded-lg transition-colors mt-4 text-sm shadow-lg shadow-blue-900/40">
+                Sign Up
+            </button>
+
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05. Box Model - Tailwind CSS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="p-10 bg-slate-50 font-[Plus_Jakarta_Sans]">
+    
+    <a href="index.html" class="inline-block mb-8 text-blue-600 hover:underline">← Volver al índice</a>
+
+    <h1>05. Box Model y Layout</h1>
+
+    <div class="space-y-20">
+
+        <!-- Padding y Margin -->
+        <section>
+            <h2 class="mb-6">Padding vs Margin</h2>
+            <div class="bg-blue-200 p-10 m-10 border-4 border-blue-600">
+                <div class="bg-white p-6">
+                    Elemento con <strong>m-10</strong> (fuera) y <strong>p-10</strong> (dentro).
+                </div>
+            </div>
+        </section>
+
+        <!-- Ancho y Alto -->
+        <section>
+            <h2 class="mb-6">Dimensiones (Width & Height)</h2>
+            <div class="w-full bg-gray-200 p-4 mb-4 text-center">w-full (100%)</div>
+            <div class="w-1/2 bg-gray-300 p-4 mb-4 text-center">w-1/2 (50%)</div>
+            <div class="w-1/4 bg-gray-400 p-4 mb-4 text-center">w-1/4 (25%)</div>
+        </section>
+
+        <!-- Ejercicio Card -->
+        <section class="flex flex-col items-center">
+            <h2 class="mb-10 text-3xl font-bold">Ejercicio Final: Card Component</h2>
+            
+            <!-- COMIENZO DEL EJERCICIO CARD -->
+            <div class="w-full max-w-md mx-auto border-2 border-gray-500/50 py-7 px-5 rounded-2xl space-y-8 bg-white shadow-lg">
+                
+                <img src="https://placehold.co/600x400/landscape" class="w-full h-60 object-cover rounded-md" alt="Paisaje de montaña">
+                
+                <div class="space-y-4">
+                    <h3 class="text-3xl font-bold">¡Título Card!</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga temporibus consectetur libero impedit a
+                        provident sed exercitationem, praesentium quam ea accusamus voluptatem unde?
+                    </p>
+                </div>
+                
+                <a href="#" class="block bg-blue-600 hover:bg-blue-700 text-white text-center py-4 rounded-full transition-colors font-semibold">
+                    Leer más
+                </a>
+            </div>
+            <!-- FIN DEL EJERCICIO CARD -->
+
+        </section>
+
+    </div>
+
+</body>
+</html>
